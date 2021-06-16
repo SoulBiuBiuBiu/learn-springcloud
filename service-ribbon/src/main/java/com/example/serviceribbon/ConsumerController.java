@@ -13,11 +13,22 @@ public class ConsumerController {
 
     @GetMapping("/ribbon-consumer")
     @HystrixCommand(fallbackMethod = "hiError")
-    public String helloConsumer(String name){
-        return restTemplate.getForEntity("http://SERVICE-HI/hello",String.class).getBody();
+    public String helloConsumer(String name) {
+        return restTemplate.getForEntity("http://SERVICE-HI/hello", String.class).getBody();
     }
-    public String hiError(String name) {
-        return "hi,"+name+",sorry,error!";
+
+    /**
+     * Throwable e 针对不同异常做针对处理
+     * @param name
+     * @param e
+     * @return
+     */
+    public String hiError(String name, Throwable e) {
+        if (e instanceof IllegalArgumentException) {
+            return "1";
+        }
+
+        return "hi," + name + ",sorry,error!";
     }
 
 }
