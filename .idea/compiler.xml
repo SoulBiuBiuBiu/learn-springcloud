@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="service-ribbon" />
         <module name="eureka-client" />
         <module name="eureka-server" />
-        <module name="service-ribbon" />
+        <module name="hystrix-dashboard" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="EurekaServer" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="hystrix-dashboard" options="-parameters" />
       <module name="sc-f-chapter01" options="-parameters" />
       <module name="service-ribbon" options="-parameters" />
     </option>

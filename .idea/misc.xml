@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/../EurekaServer/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-client/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix-dashboard/pom.xml" />
       </list>
     </option>
   </component>
