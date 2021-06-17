@@ -9,6 +9,7 @@
         <module name="service-ribbon" />
         <module name="eureka-client" />
         <module name="eureka-server" />
+        <module name="feign-consumer" />
         <module name="turbin" />
         <module name="hystrix-dashboard" />
       </profile>
@@ -22,6 +23,7 @@
       <module name="EurekaServer" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="feign-consumer" options="-parameters" />
       <module name="hystrix-dashboard" options="-parameters" />
       <module name="sc-f-chapter01" options="-parameters" />
       <module name="service-ribbon" options="-parameters" />
