@@ -9,6 +9,7 @@
         <module name="service-ribbon" />
         <module name="eureka-client" />
         <module name="eureka-server" />
+        <module name="turbin" />
         <module name="hystrix-dashboard" />
       </profile>
     </annotationProcessing>
@@ -24,6 +25,7 @@
       <module name="hystrix-dashboard" options="-parameters" />
       <module name="sc-f-chapter01" options="-parameters" />
       <module name="service-ribbon" options="-parameters" />
+      <module name="turbin" options="-parameters" />
     </option>
   </component>
 </project>
