@@ -8,6 +8,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Random;
 
 @RestController
 public class HelloController {
@@ -16,13 +17,21 @@ public class HelloController {
     private DiscoveryClient client;
 
     @GetMapping(value = "/hello")
-    public String index() {
+    public String index() throws InterruptedException {
         List<String> services = client.getServices();
         logger.info(services.toString());
+        List<ServiceInstance> instances = null;
         for (String service :
                 services) {
-            List<ServiceInstance> instances = client.getInstances(service);
-            logger.info(instances.toString());
+            instances = client.getInstances(service);
+//            logger.info(instances.toString());
+        }
+        //测试超时
+        int sleepTime = new Random().nextInt(3000);
+        logger.info("sleepTime:" + sleepTime);
+        Thread.sleep(3000);
+        if(instances.size()!=0){
+            logger.info("Current service-hi Instance:" + instances.get(0).getPort());
         }
         return "Hello world!";
     }
