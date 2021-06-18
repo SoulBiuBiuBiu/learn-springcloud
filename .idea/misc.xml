@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/hystrix-dashboard/pom.xml" />
         <option value="$PROJECT_DIR$/turbin/pom.xml" />
         <option value="$PROJECT_DIR$/feign-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/service-hi-api/pom.xml" />
       </list>
     </option>
   </component>

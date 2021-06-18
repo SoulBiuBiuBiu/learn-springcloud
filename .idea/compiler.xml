@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="service-ribbon" />
+        <module name="service-hi-api" />
         <module name="eureka-client" />
+        <module name="hystrix-dashboard" />
         <module name="eureka-server" />
         <module name="feign-consumer" />
         <module name="turbin" />
-        <module name="hystrix-dashboard" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +27,7 @@
       <module name="feign-consumer" options="-parameters" />
       <module name="hystrix-dashboard" options="-parameters" />
       <module name="sc-f-chapter01" options="-parameters" />
+      <module name="service-hi-api" options="-parameters" />
       <module name="service-ribbon" options="-parameters" />
       <module name="turbin" options="-parameters" />
     </option>

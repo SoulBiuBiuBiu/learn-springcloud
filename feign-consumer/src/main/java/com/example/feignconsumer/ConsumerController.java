@@ -1,5 +1,6 @@
 package com.example.feignconsumer;
 
+import com.example.feignconsumer.refactor.RefactorHelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConsumerController {
     @Autowired
     HelloService helloService;
+    @Autowired
+    RefactorHelloService refactorHelloService;
 
     @RequestMapping(value = "/feign-consumer", method = RequestMethod.GET)
     public String helloConsumer() {
@@ -22,6 +25,14 @@ public class ConsumerController {
         sb.append(helloService.hello("DIDI")).append("\n");
         sb.append(helloService.hello("DIDI", 30)).append("\n");
         sb.append(helloService.hello(new User("DIDI", 30))).append("\n");
+        return sb.toString();
+    }
+
+    @RequestMapping(value = "/feign-consumer3", method = RequestMethod.GET)
+    public String helloConsumer3() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(refactorHelloService.hello("DIDI")).append("\n");
+        sb.append(refactorHelloService.hello("DIDI", 30)).append("\n");
         return sb.toString();
     }
 }
